@@ -1,0 +1,115 @@
+:root{
+    --head-font:  'Pacifico', cursive;
+    --body-font:  'PT Sans Caption', sans-serif;
+    --yellow: #fec260;
+    --bg-color: #F7ECDE;
+    --green:  #3ca55c;
+    --orange: #d1512d;
+    --btn-hover-bg: #bb4120;
+    --btn-hover-border-color: #a03315;
+    --pink: #EF4040;
+    --card-color: #FFFFFF;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--yellow);
+    color: #352e28;
+}
+
+body{
+    font-family: var(--body-font);
+}
+#body{
+    background-color: var(--bg-color);
+}
+
+/* **************head************* */
+h1{
+    font-family: var(--head-font);
+    font-size: 50px;
+}
+h1::after{
+        content: "";
+        position: absolute;
+        width: 24%;
+        height: 25%;
+        left: 38%;
+        bottom: 10px;
+        background-color: var(--yellow);
+        transition: height 0.4s;
+        z-index: -1;
+    
+}
+h1:hover::after{
+    height: 50%;
+}
+
+.row p{
+    font-size: 25px;
+    font-weight: 600;
+    background-image: linear-gradient(to right,var(--green), var(--yellow));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.brdr{
+    border-bottom: 2px dotted #212529;
+}
+/* inputs bookMark---------------------------------- */
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+label i{
+    color: var(--pink);
+}
+/* button----------------------------------------- */
+.btn-submit{
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 40px;
+    background-color: var(--orange);
+    color: #fff;
+    border: 1px solid var(--orange);
+    transition: all 0.4s;
+}
+.btn-submit:hover{
+    background-color: var(--btn-hover-bg);
+    border: 1px solid var(--btn-hover-border-color);
+    color: #fff;
+}
+
+
+
+
+/* alert card -------------------------- */
+.card{
+    background-color: var(--card-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.card-text{
+    font-size: 18px;
+}
+.card-text i{
+    color: var(--btn-hover-border-color);
+}
+.dots i{
+    font-size: 20px;
+}
+.xmark i{
+    font-size: 24px;
+    font-weight: 600;
+}
+.xmark .btn{
+    border: none;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+        <title>Bookmark</title>
+    </head>
+    <body id="body">
+        <!-- bookMark system -->
+        <div class="container my-5 position-relative">
+            <!-- alert card -->
+            <section id="cardAlert" class="d-none">
+                <div class="card mb-3 position-absolute z-2" >
+                    <div class="card-body px-4">
+                    <div class="d-flex justify-content-between">
+                    <div class="dots d-flex my-3 px-2">
+                        <i class="fa-solid fa-circle me-2 text-danger"></i>
+                        <i class="fa-solid fa-circle me-2 text-warning"></i>
+                        <i class="fa-solid fa-circle me-2 text-success"></i>
+                    </div>
+                    <div class="xmark my-3 px-2">
+                        <button onclick="closeMark()" class="btn"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+                    <h5 class="card-title text-black fw-bold my-3 px-2">Site Name or Url is not valid, Please follow the rules below :</h5>
+                    <p class="card-text text-black my-3 px-2"><i class="fa-regular fa-circle-right me-3"></i>Site name must contain at least 3 characters</p>
+                    <p class="card-text text-black my-3 px-2"><i class="fa-regular fa-circle-right me-3"></i>Site URL must be a valid one</p>
+                    </div>
+                </div>
+            </section>
+            <h1 class="text-center my-5 position-relative">Bookmarker</h1>
+            <div class="brdr"></div>
+            <div class="row my-2">
+                <p class="text-center my-4">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </p>
+                <div class="col-md-12">
+                    <label class="my-3 fw-bold" for="bName"><i class="fa-solid fa-book-bookmark me-3"></i>Site Name</label>
+                    <input type="text" oninput="validName()"  id="bName" class="form-control" placeholder="Bookmark Name">
+                </div>
+                <div class="col-md-12">
+                    <label class="my-3 fw-bold" for="bUrl"><i class="fa-solid fa-link me-3"></i>Site URL</label>
+                    <input type="url" oninput="validUrl()" id="bUrl" class="form-control" placeholder="Website URL">
+                </div>
+                <div class="col-md-12 my-4 text-center">
+                    <button onclick="addBook()" class="btn btn-submit shadow">Submit</button>
+                </div>
+            </div>
+        </div>
+        <!-- table board -->
+        <div class="container my-5">
+            <div class="brdr"></div>
+            <table class="table my-3 text-center shadow">
+                <thead>
+                    <th>index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tbody">
+                
+                </tbody>
+            </table>
+        </div>
+        
+        
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
